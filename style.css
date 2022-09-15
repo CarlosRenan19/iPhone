@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,800;0,900;1,200;1,300;1,400;1,500;1,800;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins";
+}
+
+body {
+    background-color: #e9e7e8;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 150px;
+    background-color: black;
+}
+
+.logo {
+    cursor: pointer;
+}
+
+.links-header {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    transition: all 0.4s ease-in-out;
+}
+
+.links-header a {
+    text-decoration: none;
+    color: #7e7e7e;
+    font-weight: 500;
+    border-bottom: 2px solid transparent;
+    transition: all 0.4s ease-in-out;
+}
+
+.links-header a:nth-child(3) {
+    border-bottom: 2px solid white;
+    color: white;
+}
+
+.links-header a:hover {
+    color: white;
+    border-bottom:2px solid white;
+}
+
+.info-do-produto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px; 
+    gap: 25rem;
+    margin-top: 8rem;
+    margin-bottom: 4rem;
+}
+
+.texto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    width: 750px;
+}
+
+.poder {
+    font-size: 40px;
+}
+
+.descricao {
+    color: rgb(0, 0, 0);
+    font-weight: 445;
+}
+
+.preco {
+    font-size: 25px;
+    color: #a3a3a3;
+}
+
+.texto button {
+    width: 150px;
+    border: none;
+    cursor: pointer;
+    background-color: #0f78e3;
+    padding: 10px;
+    border-radius: 50px;
+    color: white;
+    font-size: 16px;
+    transition: all 0.4s ease-in-out;
+}
+
+.texto button:hover {
+    background-color: #278cf0;
+}
+
+.cores {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.cores span {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 1px 1px #888;
+}
+
+#green{
+    background: #384937;
+}
+#pink{
+    background: #f8ddd6;
+}
+#blue{
+    background: #225f7e;
+}
+#black{
+    background: #192028;
+}
+#white{
+    background: #f7f2ee;
+}
+#red{
+    background: #ae0617;
+}
+
+.hamburguer {
+    cursor: pointer;
+    display: none;
+}
+
+.hamburguer span {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 28px;
+    height: 3px;
+    border-radius: 3px;
+    margin: 0.3rem;
+    transition: all 0.4s ease-in-out;
+}
+
+@media (max-width: 1440px) {
+    .info-do-produto img {
+        width: 32%;
+    }
+
+    .info-do-produto {
+        gap: 4rem;
+    }
+}
+
+@media (max-width: 980px) {
+    header {
+        justify-content: space-between;
+        padding: 20px 50px;
+    }
+
+
+    .hamburguer {
+        display: block;
+    }
+
+    .hamburguer.menu span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburguer.menu span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburguer.menu span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .links-header {
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        position: absolute;
+        top: 90.5px;
+        left: -100%;
+        background-color: black;
+        padding: 20px;
+        gap: 3rem;
+        border-radius: 0 0 20px 20px;
+    }
+
+    .links-header.menu {
+        left: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .poder {
+        font-size: 150%;
+    }
+}
+
+@media (max-width: 425px) {
+    .info-do-produto {
+        flex-direction: column;
+        padding: 0;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .texto {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    }
+
+    .info-do-produto img {
+        width: 80%;
+    }
+}
+
+@media (max-width: 375px) {
+    .texto {
+        width: 350px;
+    }
+}
+
+@media (max-width: 320px) {
+    .logo {
+     width: 40px;
+    }
+
+    .texto {
+        width: 300px;
+    }
+
+    .links-header {
+        top: 80.5px;
+    }
+}
